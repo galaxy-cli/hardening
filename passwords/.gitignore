@@ -1,0 +1,12 @@
+# Ignore the actual KeePassXC database files
+*.kdbx
+
+# Ignore any temporary or backup files created by KeePassXC
+*.kdbx.lock
+*.kdbx.tmp
+*.old
+
+# Ignore local sync/conflict files
+*~
+*.tmp
+*.bak
