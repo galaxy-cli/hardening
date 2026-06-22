@@ -8,7 +8,7 @@ This repository provides the configuration steps and documentation for an advanc
 
 ### 1. The Engine: Mozilla Firefox
 Firefox is chosen as the foundational web browser due to its open-source nature and robust configuration architecture (`about:config`), which allows deep manipulation of browser flags.
-* **Action**: Download and install the latest stable version of [Mozilla Firefox](https://mozilla.org).
+* **Action**: Download and install the latest stable version of [Firefox](https://www.firefox.com/en-US/).
 
 ### 2. The Hardening Layer: arkenfox user.js
 The `arkenfox user.js` template is a configuration file that enforces strict privacy and security settings. It disables telemetry, activates native anti-fingerprinting configurations (RFB), and restricts hidden API access.
@@ -20,7 +20,7 @@ The `arkenfox user.js` template is a configuration file that enforces strict pri
 
 ### 3. The Shield: uBlock Origin
 uBlock Origin is used for wide-spectrum content filtering, preventing tracking networks and malicious advertisements from executing in the DOM.
-* **Action**: Install the [uBlock Origin Firefox Add-on](https://mozilla.org). Keep filter lists updated to their default recommended values.
+* **Action**: Install the [uBlock Origin Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/). Keep filter lists updated to their default recommended values.
 
 ### 4. The Default Engine: DuckDuckGo
 DuckDuckGo is the primary search tool to ensure queries are not tied to a permanent advertising identifier.
@@ -45,11 +45,3 @@ To eliminate local state tracking and "zombie cookies," the environment is confi
    * Active logins
    * Form & search history
    * Site settings (Optional: uncheck if you want to keep persistent site-specific permissions)
-
----
-
-## Known Limitations & Operational Overhead
-
-* **Website Breakage**: The `user.js` hardening template disables legacy web features and alters browser canvas reporting. Some banking, e-commerce, and streaming portals will fail to function out-of-the-box.
-* **Authentication Friction**: Because all cookies and active logins are purged upon closing the browser, you will be systematically logged out of all web applications between sessions. 
-* **IP Address Visibility**: This setup hardens your local browser attributes but **does not alter your network routing**. Your public IP address remains fully exposed to websites and your Internet Serving Provider (ISP).
